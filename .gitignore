@@ -1,0 +1,7 @@
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+
+/spec/socketio_server/node_modules
+/spec/socketio_server/*.log
