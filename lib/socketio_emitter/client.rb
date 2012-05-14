@@ -54,7 +54,7 @@ module SocketioEmitter
 
     # Receive a response from the session
     def receive
-      uri = URI.parse("#{@uri.scheme}://#{@uri.hostname}:#{@uri.port}/socket.io/1/xhr-polling/#{@socketio.first}?t=#{Time.now.to_i}")
+      uri = URI.parse("#{@uri.scheme}://#{@uri.host}:#{@uri.port}/socket.io/1/xhr-polling/#{@socketio.first}?t=#{Time.now.to_i}")
       response = Net::HTTP.get_response(uri)
       response.code == "200" ? response.body : false
     end
